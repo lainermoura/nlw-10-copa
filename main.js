@@ -19,14 +19,16 @@ let createCard = (date, day, games) => {
     `
 }
 
-document.querySelector('#cards').innerHTML = 
-        createCard(
-            '24/11', 'quinta',  createGame('brazil', '16:00', 'serbia')) +
+document.querySelector('#cards').innerHTML =
+    createCard(
+        '20/11', 'domingo', createGame('qatar', '13:00', 'ecuador')) +
+    createCard(
+        '24/11', 'quinta', createGame('brazil', '16:00', 'serbia')) +
 
-        createCard(
-            '28/11', 'segunda',  
-            createGame('brazil', '13:00', 'switzerland') + 
-            createGame('portugal', '16:00', 'uruguay')) +
+    createCard(
+        '28/11', 'segunda',
+        createGame('brazil', '13:00', 'switzerland') +
+        createGame('portugal', '16:00', 'uruguay')) +
 
-        createCard(
-            '01/12', 'sexta',  createGame('brazil', '16:00', 'cameroon'))
+    createCard(
+        '01/12', 'sexta', createGame('brazil', '16:00', 'cameroon'))
