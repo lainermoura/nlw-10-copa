@@ -3,7 +3,7 @@ let createGame = (player1, hour, player2) => {
     <li>
         <img src="./assets/icon-${player1}.svg" alt="icon-${player1}-flag" title="${player1.toUpperCase()}">
         <strong>${hour}</strong>
-        <img src="./assets/icon-${player2}.svg" alt="icon-${player2}-flag" title="${player2.toUpperCase()}">
+        <img src="./assets/icon-${player2}.svg" alt="icon-${player2}-flag" title="${player2.toUpperCase().replace('-', ' ')}">
     </li>
 `
 }
@@ -33,6 +33,12 @@ document.querySelector('#cards').innerHTML =
         createGame('denmark', '10:00', 'tunisia') +
         createGame('mexico', '13:00', 'poland') +
         createGame('france', '16:00', 'australia')) +
+    createCard(
+        '23/11', 'quarta',
+        createGame('morocco', '07:00', 'croatia') +
+        createGame('germany', '10:00', 'japan') +
+        createGame('spain', '13:00', 'costa-rica') +
+        createGame('belgium', '16:00', 'canada')) +
     createCard(
         '24/11', 'quinta', createGame('brazil', '16:00', 'serbia')) +
     createCard(
