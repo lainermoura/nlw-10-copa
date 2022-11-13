@@ -1,9 +1,15 @@
 let createGame = (player1, hour, player2) => {
     return `
     <li>
-        <img src="./assets/icon-${player1}.svg" alt="icon-${player1}-flag" title="${player1.toUpperCase()}">
+        <div>
+            <img src="./assets/icon-${player1}.svg" alt="icon-${player1}-flag" title="${player1.toUpperCase().replace('-', ' ')}">
+            <p>${player1.toUpperCase().replace('-', ' ')}</p>
+        </div>
         <strong>${hour}</strong>
-        <img src="./assets/icon-${player2}.svg" alt="icon-${player2}-flag" title="${player2.toUpperCase().replace('-', ' ')}">
+        <div>
+            <img src="./assets/icon-${player2}.svg" alt="icon-${player2}-flag" title="${player2.toUpperCase().replace('-', ' ')}">
+            <p>${player2.toUpperCase().replace('-', ' ')}</p>
+        </div>
     </li>
 `
 }

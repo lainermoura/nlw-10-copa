@@ -126,6 +126,10 @@ header {
     animation:  appear .2s forwards;
 }
 
+.card ul li div p {
+   display: none;
+}
+
 @keyframes appear {
     0% {
         transform: translateY(-50px);
@@ -137,10 +141,16 @@ header {
     }
 }
 
-@media (min-width: 700px) {
+@media (max-width: 700px) {
     #cards {
         max-width: 670px;
         flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card ul li div p {
+        display: block;
+        color: white;
+        font-size: .55rem;
         flex-wrap: wrap;
     }
 }
